@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <header class="bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Add Product</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+        <section id="form" class="bg-light py-5">
+            <div class="conatainer">
+                <p>Enter product details</p>
+                {% if errormessage %}
+                    <div class="alert alert-danger" role="alert">
+                        {{errormessage}}
+                    </div>
+                {% endif %}
+                <form action="/add-product" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</lavel>
+                        <input type="text" id="name" name="name" class="form-control" value="{{ name }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</lavel>
+                        <input type="text" id="description" name="description" class="form-control" value="{{ description }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</lavel>
+                        <input type="number" id="price" name="price" class="form-control" min="0" step="any" value="{{price}}" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

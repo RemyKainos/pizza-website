@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Time</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"></head>
+<body>
+    <header class="bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <h1>{{title}}</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#locations">Locations</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </nav>     
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-4">
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <p>Check out our delicious pizza options!</p>
+            <div class="row">
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="https://picsum.photos/200/150?random=1" alt="Pepperoni" class="card-img-top">
+                        <div class="card-body">
+                            <h3 class="card-title">Pepperoni Pizza</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="https://picsum.photos/200/150?random=2" alt="Margherita" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-body">Margherita</h3>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="https://picsum.photos/200/150?random=3" alt="" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-body">Hawaiian Pizza</h3>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="https://picsum.photos/200/150?random=4" alt="" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-body">Supreme Pizza</h3>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section id="locations">
+            <h2>Our Locations</h2>
+            <p>Find a Pizza Time near you!</p>
+            <ul>
+                <li>New York City</li>
+                <li>Los Angeles</li>
+                <li>Chicago</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Send us a message!</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Pizza Time 2023</p>
+    </footer>
+    <script src="public/script.js"></script>
+</body>
+</html>
